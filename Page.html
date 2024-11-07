@@ -8,32 +8,24 @@
 </head>
 <body>
 
-<!-- Login Container -->
-<div class="container" id="loginContainer">
-  <h2>Login</h2>
-  <input type="text" id="username" class="input-field" placeholder="Username" required>
-  <input type="password" id="password" class="input-field" placeholder="Password" required>
-  <button class="button" onclick="validateLogin()">Login</button>
-  <p id="loginErrorMessage" class="error-message"></p>
-</div>
 
-<!-- Currency Converter Container -->
-<div class="container" id="currencyConverter" style="display: none;">
-  <h2>Currency Converter</h2>
-  <input type="number" id="amount" class="input-field" placeholder="Enter amount" required>
-  <select id="fromCurrency" class="select-field">
-    <option value="USD">USD - American Dollar</option>
-    <option value="EUR">EUR - Euro</option>
-    <option value="INR">INR - Indian Rupee</option>
-  </select>
-  <select id="toCurrency" class="select-field">
-    <option value="USD">USD - American Dollar</option>
-    <option value="EUR">EUR - Euro</option>
-    <option value="INR">INR - Indian Rupee</option>
-  </select>
-  <button class="button" onclick="convertCurrency()">Convert</button>
-  <p id="conversionResult" class="result"></p>
-  <p id="apiErrorMessage" class="error-message"></p>
+<div class="outer-container">
+  <div class="container">
+    <h2>Currency Converter</h2>
+    <input type="number" id="amount" class="input-field" placeholder="Amount" required>
+    <select id="fromCurrency" class="select-field">
+      <option value="USD">USD - American Dollar</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="INR">INR - Indian Rupee</option>
+    </select>
+    <input type="text" id="conversionResult" class="input-field" placeholder="Convert" readonly>
+    <select id="toCurrency" class="select-field">
+      <option value="USD">USD - American Dollar</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="INR">INR - Indian Rupee</option>
+    </select>
+    <button class="button" onclick="convertCurrency()">Convert</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
